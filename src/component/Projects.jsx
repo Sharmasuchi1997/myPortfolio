@@ -2,11 +2,12 @@ import { div } from "framer-motion/client";
 import About from "./About";
 import Skill from "./Skill";
 import Contact from "./Contact";
+import costcoProjectImg from "../../public/costcoProjectSS.png"
 
 
 const myProjects=[
     {
-        'image':'public/costcoProjectSS.png',
+        'image':{costcoProjectImg},
         "projectName":"Costco Clone",
         "tech_stack":[
             { "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxKA5qN5os0CI01RyxSsKA2lgAf6hWz2jBEQ&s"},
