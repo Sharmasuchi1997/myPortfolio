@@ -1,6 +1,3 @@
-import About from "./About"
-import Projects from "./Projects"
-import Skill from "./Skill"
 
 
 const contact = [
@@ -22,7 +19,7 @@ const contact = [
 export default function Contact() {
     console.log("contact")
     return (
-        <>
+        <div id="contact">
         {/* <About/>  */}
         {/* <Skill/>
         <Projects/> */}
@@ -43,6 +40,6 @@ export default function Contact() {
             
             </div>
           
-        </>
+        </div>
     )
 }

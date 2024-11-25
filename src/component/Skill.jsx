@@ -65,7 +65,7 @@ const language = [
 
 export default function Skill() {
     return (
-        <>
+        <div id="skills">
         {/* <About/> */}
             <h1 style={{textAlign:"center", fontSize:"50px", color:"darkgoldenrod", textDecoration:"underline"}}>Skill</h1>
             <div style={{
@@ -107,6 +107,6 @@ export default function Skill() {
             {/* <Projects/>
             <Contact/> */}
              <hr />
-        </>
+        </div>
     )
 }

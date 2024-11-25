@@ -1,6 +1,7 @@
-import { button } from "framer-motion/client"
-import { Link } from "react-router-dom"
+import { a, button } from "framer-motion/client"
+// import { Link } from "react-router-dom"
 import { useState } from "react"
+import { Link } from "react-scroll";
 // import {HStack, Container} from '@chakra-ui/react'
 
 const listOfLink=[
@@ -9,33 +10,27 @@ const listOfLink=[
     //     'label':'Home'
     // },
     {
-        'to':'/about',
+        'to':'about',
         'label':'About'
     },
 
     {
-        'to':'/skill',
-        'label':'Skill'
+        'to':'skills',
+        'label':'Skills'
     },
     {
-        'to':'/projects',
+        'to':'projects',
         'label':'Projects'
     },
     {
-        'to':'/contact',
+        'to':'contact',
         'label':'Contact'
     }
 ]
 
 
-export default function Navbar({onNavigate}){
+export default function Navbar(){
 
-    const[activeLink, setActiveLink]= useState("about")
-
-    const handleClick=(section)=>{
-        setActiveLink(section)
-        onNavigate(section)
-    }
 
     return(
         <>
@@ -51,19 +46,20 @@ export default function Navbar({onNavigate}){
             
         }}> 
         {
-            listOfLink.map((link)=>(
+            listOfLink.map((link, ind)=>(
                 // <Link key={link.to} to={link.to}>
                  
                 //    {link.label}
                 // </Link>
-                <button key={link.to} 
+               <Link to={link.to} smooth={true} duration={500} key={ind}>
+                 <button key={link.to} 
                     onClick={()=>handleClick(link.to)}
                     style={{
                         border:"none",
-                        background: activeLink===link.to ? "darkgrey": "transparent",
-                        color: activeLink===link.to ? "#fff" :"#000",
+                        background: link.to ? "darkgrey": "transparent",
+                        color: link.to ? "#fff" :"#000",
                         fontSize:"30px",
-                        color:"darkgoldenrod",
+                        // color:"darkgoldenrod",
                         fontWeight:"bold",
                         textDecoration:'underline'
 
@@ -72,6 +68,7 @@ export default function Navbar({onNavigate}){
                 >
                     {link.label}
              </button>
+               </Link>
             ))
         }
 

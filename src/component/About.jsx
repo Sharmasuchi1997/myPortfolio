@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 import Skill from "./Skill"
 import Projects from "./Projects"
 import Contact from "./Contact"
+import myPortfolioPic from "../assets/myPortfolioPic.jpg"
 
 export default function About() {
     // const navigate=useNavigate()
@@ -15,7 +16,7 @@ export default function About() {
     }
 
     return (
-        <>
+        <div id="about">
 
             <div style={{
                 width: "100%",
@@ -100,7 +101,7 @@ export default function About() {
 
 
                         }}
-                        src="my edit pic for portfolio.jpg" alt="myPic" />
+                        src={myPortfolioPic} alt="myPic" />
 
                 </div>
                 
@@ -109,6 +110,6 @@ export default function About() {
         <Projects/>
         <Contact/> */}
         <hr />
-        </>
+        </div>
     )
 }

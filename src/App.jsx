@@ -11,22 +11,22 @@ import './App.css'
 // import Contact from './component/Contact'
 import AllRoutes from './component/AllRoutes'
 import Navbar from './component/Navbar'
+import About from './component/About'
+import Skill from './component/Skill'
+import Projects from './component/Projects'
+import Contact from './component/Contact'
 
 function App() {
 
-      const handleNavigation=(section)=>{
-      
-        document.getElementById(section)?.scrollIntoView({
-          behavior:"smooth",
-          block:"start"
-        })
-      }
+     
 
   return (
     <>
-    <Navbar onNavigate={handleNavigation}/>
-<AllRoutes onNavigate={handleNavigation}/>
-     
+    <Navbar/>
+     <About/>
+     <Skill/>
+     <Projects/>
+     <Contact/>
      
     </>
   )
